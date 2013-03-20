@@ -1,6 +1,6 @@
 package br.com.senacrs.alp.aulas;
 
-public interface Lista<T extends Object> {
+public interface Lista<T extends Object> { //interface define as assinaturas de métodos
 
 	void adicionarFinal(T valor);
 
