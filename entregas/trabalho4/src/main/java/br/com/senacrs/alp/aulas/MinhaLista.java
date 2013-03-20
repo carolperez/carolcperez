@@ -1,6 +1,8 @@
 package br.com.senacrs.alp.aulas;
 
 public class MinhaLista<T> implements Lista <T>{
+	
+	private Nodo<T> inicio = new Nodo<T>();
 
 	@Override
 	public void adicionarFinal(T valor) {
@@ -40,8 +42,17 @@ public class MinhaLista<T> implements Lista <T>{
 
 	@Override
 	public int obterTamanho() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		int resultado = 0;
+		Nodo<T> nodo = null;
+		
+		nodo = inicio;
+		while (nodo.proximo != null){
+			nodo = nodo.proximo;
+			resultado++;
+		}
+		
+		return resultado;
 	}
 
 	@Override
