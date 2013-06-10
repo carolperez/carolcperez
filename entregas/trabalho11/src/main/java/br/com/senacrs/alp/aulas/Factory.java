@@ -4,19 +4,21 @@ public class Factory {
 	
 	private static final Factory instancia = new Factory();
 	
-	private Factory() {
-	}
-	
-	public ArquivoConfiguracao criarArquivoConfiguracao(String arquivoEntrada) {
-	
-		ArquivoConfiguracao resultado = null;
+		private Factory() {
+		}
 		
-		//implementar
-		
-		return resultado;
-	}
-	
-	public static Factory getInstancia() {
+			public ArquivoConfiguracao criarArquivoConfiguracao(String arquivoEntrada) {
+			
+				ArquivoConfiguracao resultado = null;
+				
+				//implementar
+				
+				resultado = new MeuArquivoConfiguracao(arquivoEntrada);
+				
+				return resultado;
+			}
+			
+			public static Factory getInstancia() {
 		return instancia;
 	}
 }
